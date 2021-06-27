@@ -10,3 +10,10 @@ Run below command in root to create build of docker-compose
 ```bash
 docker-compose build
 ```
+
+Run below command to start dockers
+```bash
+docker-compose up
+```
+
+Go to localhost:3500 to access frontend
