@@ -1,11 +1,9 @@
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY ./package.json ./
+COPY package.json ./
 RUN npm install --legacy-peer-deps
-RUN npm install -g @angular/cli
-COPY ./package.json ./
 COPY . .
-RUN ng build --prod
+RUN npm run build
 
 FROM nginx
 EXPOSE 3000
